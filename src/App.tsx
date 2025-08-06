@@ -34,11 +34,10 @@ function App() {
 
   const handleUploadingData = (data: Experiment[]) => {
     setLoading(true);
-    setRowData(data)
+    setRowData(data);
 
     setTimeout(() => {
-
-      setLoading(false)
+      setLoading(false);
     }, 2000)
   }
 
@@ -70,7 +69,11 @@ function App() {
           p: 2
         }}
       >
-        {loading && <LinearProgress />}
+        {loading && (
+          <Box sx={{ width: '100%' }}>
+            <LinearProgress />
+          </Box>
+        )}
 
         {!loading && selectedMetric && (
           <>

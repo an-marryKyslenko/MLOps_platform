@@ -6,7 +6,6 @@ const Header = ({children}: {children: React.ReactNode}) => {
 		<AppBar 
 			position='static' 
 			sx={{
-				py: 2,
 				zIndex: (theme) => theme.zIndex.drawer + 1
 			}}>
 				<Toolbar sx={{display: 'flex', justifyContent: 'space-between'}}>

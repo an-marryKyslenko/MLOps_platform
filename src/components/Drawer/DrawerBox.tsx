@@ -23,7 +23,7 @@ const DrawerBox = ({open, onClose, children}: Props) => {
 				sx={{
 				[`& .MuiDrawer-paper`]: {
 					p: 2,
-					pt: 11,
+					pt: 10,
 					width: 250,
 					boxSizing: 'border-box',
 				},
@@ -42,7 +42,7 @@ const DrawerBox = ({open, onClose, children}: Props) => {
 			flexShrink: 0,
 			[`& .MuiDrawer-paper`]: {
 				p: 2,
-				pt: 13,
+				pt: 10,
 				width: 250,
 				boxSizing: 'border-box',
 			},
