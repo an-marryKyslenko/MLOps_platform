@@ -12,7 +12,8 @@ const UploadCSV = ({ onDataParsed }: Props) => {
 
 	const handleFileChange = (e: React.FormEvent<HTMLInputElement>) => {
 		const fileList = e.currentTarget.files;
-
+		setFileName('');
+		
 		if(fileList && fileList?.length > 0 ) {
 			Papa.parse<Experiment>(fileList[0], {
 			header: true,

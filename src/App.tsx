@@ -38,7 +38,8 @@ function App() {
 
     setTimeout(() => {
       setLoading(false);
-    }, 2000)
+    }, 2000);
+    
   }
 
   const handleSelectExp = (list: string[]) => {
