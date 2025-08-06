@@ -9,11 +9,11 @@ export const options = {
 	spanGaps: true,
 	datasets: {
 		line: {
-				pointRadius: 0 // disable for all `'line'` datasets
+				pointRadius: 0,
 		},
 		elements: {
 			point: {
-					radius: 0 // default to disabled in all datasets
+					radius: 0,
 			}
 		}
 	},
