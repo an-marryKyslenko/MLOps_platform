@@ -3,6 +3,7 @@ import { Button, Stack, Typography } from '@mui/material';
 import Papa from 'papaparse';
 import type { Experiment } from '../../types/Experiment';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import { downsample } from '../../utils/downsample';
 
 type Props = {
 	onDataParsed: (data: Experiment[]) => void
@@ -19,11 +20,11 @@ const UploadCSV = ({ onDataParsed }: Props) => {
 			header: true,
 			dynamicTyping: true,
 			complete: (results) => {
-				onDataParsed(results.data)
+				const result = downsample(results.data, 3)
+				onDataParsed(result)
 				setFileName(fileList[0].name)
-			},
+				},
 			});
-	
 		}
 	};
 

@@ -28,6 +28,7 @@ function App() {
     }
   }, [loading])
 
+  console.log(rowData.length)
   const handleClearFilter = () => {
     setSelectedExperiments([]);
   }
